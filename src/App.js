@@ -13,6 +13,13 @@ function App() {
       setResult('')
     }
   
+    //backspace
+    const backspace = () => {
+      setResult(result?.slice(0 , -1))
+    }
+  
+   
+
 
 
   return (
