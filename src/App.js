@@ -18,7 +18,14 @@ function App() {
       setResult(result?.slice(0 , -1))
     }
   
-   
+    //calc
+    const calc = () => {
+      try {
+        setResult(Number(eval(result).toString()).toFixed(2))
+      } catch (error) {
+        setResult('invalid format')
+      }
+    }
 
 
 
@@ -29,9 +36,9 @@ function App() {
         <div className="calculator">
           <input type="text" className="calcNumbers" value={result} />
           <div className="buttons">
-            <button onClick={} className="btn clear span-2">C</button>
-            <button onClick={} className="btn orange">&larr;</button>
-            <button onClick={} name="/" className="btn orange">&divide;</button>
+            <button onClick={clear} className="btn clear span-2">C</button>
+            <button onClick={backspace} className="btn orange">&larr;</button>
+            <button onClick={clickHandler} name="/" className="btn orange">&divide;</button>
             <button onClick={clickHandler} name="7" className="btn">7</button>
             <button onClick={clickHandler} name="8" className="btn">8</button>
             <button onClick={clickHandler} name="9" className="btn">9</button>
@@ -45,7 +52,7 @@ function App() {
             <button onClick={clickHandler} name="3" className="btn">3</button>
             <button onClick={clickHandler} name="+" className="btn orange">+</button>
             <button onClick={clickHandler} name="0" className="btn span-3">0</button>
-            <button onClick={} className="btn orange equal">=</button>
+            <button onClick={calc} className="btn orange equal">=</button>
           </div>
         </div>
       </div>
