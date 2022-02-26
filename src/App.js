@@ -34,8 +34,8 @@ function App() {
       <div className="container">
         <h1 className="title">React Calculator</h1>
         <div className="calculator">
-          <input type="text" className="calcNumbers" value={result} />
-          <div className="buttons">
+          <input type="text" className="calc-numbers" value={result} />
+          <div className="calculator-buttons">
             <button onClick={clear} className="btn clear span-2">C</button>
             <button onClick={backspace} className="btn orange">&larr;</button>
             <button onClick={clickHandler} name="/" className="btn orange">&divide;</button>
@@ -46,12 +46,13 @@ function App() {
             <button onClick={clickHandler} name="4" className="btn">4</button>
             <button onClick={clickHandler} name="5" className="btn">5</button>
             <button onClick={clickHandler} name="6" className="btn">6</button>
-            <button onClick={clickHandler} name="-" className="btn">-</button>
+            <button onClick={clickHandler} name="-" className="btn orange">-</button>
             <button onClick={clickHandler} name="1" className="btn">1</button>
             <button onClick={clickHandler} name="2" className="btn">2</button>
             <button onClick={clickHandler} name="3" className="btn">3</button>
             <button onClick={clickHandler} name="+" className="btn orange">+</button>
-            <button onClick={clickHandler} name="0" className="btn span-3">0</button>
+            <button onClick={clickHandler} name="0" className="btn span-2">0</button>
+            <button onClick={clickHandler} name="." className="btn">.</button>
             <button onClick={calc} className="btn orange equal">=</button>
           </div>
         </div>
